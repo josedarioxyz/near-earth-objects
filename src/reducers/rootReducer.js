@@ -22,7 +22,7 @@ const neosReducer = (state = initialState, action) => {
     case GET_NEOS_RECEIVE:
       return {
         ...state,
-        isFetching: true,
+        isFetching: false,
         neos: action.payload
       }
     case GET_NEOS_FAILURE:

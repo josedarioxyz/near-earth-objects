@@ -9,11 +9,11 @@ export const getNeosRequest = () => ({
 });
 
 export const getNeosReceive = (response) => ({
-  type: GET_NEOS_RECEIVE
-  payload: response.data
+  type: GET_NEOS_RECEIVE,
+  payload: response
 });
 
 export const getNeosFailure = (error) => ({
-  type: GET_NEOS_FAILURE:
+  type: GET_NEOS_FAILURE,
   payload: error
 });
