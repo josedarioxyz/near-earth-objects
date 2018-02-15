@@ -3,20 +3,20 @@ import Button from '../components/Button';
 
 class NavBar extends Component {
   componentDidMount() {
-    window.onscroll = function() {applyStickyClassToNavBar()};
+    window.onscroll = function() {conditionallyToggleStickyClassOnNavBar()};
 
     const navbar = document.getElementById('navbar');
 
     const sticky = navbar.offsetTop;
 
-    function applyStickyClassToNavBar() {
+    function conditionallyToggleStickyClassOnNavBar() {
       if (window.pageYOffset >= sticky) {
         navbar.classList.add('sticky');
       } else {
         navbar.classList.remove('sticky');
       }
     }
-  }
+  };
   render() {
     return (
       <div id='navbar-container'>
@@ -27,7 +27,7 @@ class NavBar extends Component {
         </nav>
       </div>
     )
-  }
-}
+  };
+};
 
 export default NavBar;

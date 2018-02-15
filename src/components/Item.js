@@ -1,53 +1,49 @@
 import React from 'react';
+import ApproachData from './ApproachData';
 import Divider from './Divider';
 
-const Item = () => {
+const Item = ({ neo }) => {
+  const {
+    neo_reference_id,
+    name,
+    nasa_jpl_url,
+    absolute_magnitude_h,
+    estimated_diameter,
+    is_potentially_hazardous_asteroid,
+    close_approach_data
+  } = neo;
+  const {
+    estimated_diameter_min,
+    estimated_diameter_max
+  } = estimated_diameter.meters;
   return (
     <div className='container'>
       <div className="item card">
         <div className="card-body">
-          <a href='http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=3799426'>
-            <h4 className='item-name'>Name: (2016 CN248)</h4>
-            <h6 className='item-id'>ID: 3799426</h6>
+          <a href={nasa_jpl_url}>
+            <h4 className='item-name'>Name: {name}</h4>
           </a>
+          <h6 className='item-id'>Reference ID: {neo_reference_id}</h6>
           <Divider />
           <div className='row text-center'>
             <div className='col'>
               <dl>
                 <dt>Potentially Hazardous:</dt>
-                <dd>False</dd>
+                <dd>{is_potentially_hazardous_asteroid.toString()}</dd>
                 <dt>Absolute Magnitude (H):</dt>
-                <dd>22.804</dd>
+                <dd>{absolute_magnitude_h}</dd>
                 <dt>Estimated Diameter:</dt>
-                <dd>80422</dd>
+                <dd>
+                  {estimated_diameter_min} m
+                  <br />
+                    ~
+                  <br />
+                  {estimated_diameter_max} m
+                </dd>
               </dl>
             </div>
             <div className='col'>
-            <dl>
-              <dt>Close Approach Data:</dt>
-              <dd>
-                <table className="table table-sm table-striped table-dark">
-                  <tbody>
-                    <tr>
-                      <th scope="row">Date Nearest</th>
-                      <td>2018-02-14</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Relative Velocity</th>
-                      <td>53205.931152634 kph</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Miss Distance</th>
-                      <td>5583401 km</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Orbiting Body</th>
-                      <td>Earth</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </dd>
-            </dl>
+              <ApproachData data={close_approach_data[0]} />
             </div>
           </div>
         </div>
