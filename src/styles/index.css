@@ -1,0 +1,85 @@
+/*
+ * Color Scheme
+ *
+ * RICH BLACK: #001723
+ * MAASTRICHT BLUE: #04273A
+ * PRUSSIAN BLUE: #08364F
+ * BLUE SAPPHIRE #144F70
+ * DARK SKY BLUE: #84B2CC
+ */
+
+html {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  background: #08364F; /* NO gradient support */
+  background: linear-gradient(
+    to bottom right,
+    #001723,
+    #04273A,
+    #08364F,
+    #04273A,
+    #001723
+  ); /* gradient support */
+  background-repeat: no-repeat;
+}
+
+#header {
+  color: #EEE;
+  background: rgba(0, 0, 0, 0);
+}
+
+.header-date{
+  color: #84B2CC;
+}
+
+.divider {
+  background-color: #144F70;
+}
+
+#navbar {
+  height: 50px;
+}
+
+#navbar-container {
+  height: 50px;
+}
+
+.sticky {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+}
+
+.button {
+  flex: 1;
+  margin: 0px;
+  padding: 5px;
+  line-height: 16px;
+  background-color: #144F70;
+  border: 3px solid #08364F;
+  color: #84B2CC;
+}
+
+.item {
+  margin: 0 0 25px 0;
+  background: #001723;
+  color: #EEE;
+}
+
+.item-name, .item-id {
+  color: #84B2CC;
+}
+
+.item-hazardous {
+  color: red;
+}
+
+dt, th {
+  color: #84B2CC;
+}

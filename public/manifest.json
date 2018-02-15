@@ -1,0 +1,15 @@
+{
+  "short_name": "Neos",
+  "name": "Near Earth Objects",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "512x512",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#08364F",
+  "background_color": "#ffffff"
+}
