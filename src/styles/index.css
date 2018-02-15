@@ -8,6 +8,8 @@
  * DARK SKY BLUE: #84B2CC
  */
 
+* { box-sizing: border-box; }
+
 html {
   width: 100%;
   min-height: 100%;
@@ -24,6 +26,10 @@ body {
     #001723
   ); /* gradient support */
   background-repeat: no-repeat;
+}
+
+a, a:hover, a:focus {
+  text-decoration: none;
 }
 
 #header {
@@ -56,7 +62,7 @@ body {
   width: 100%;
 }
 
-.button {
+.navbar-button {
   flex: 1;
   margin: 0px;
   padding: 5px;
@@ -64,6 +70,16 @@ body {
   background-color: #144F70;
   border: 3px solid #08364F;
   color: #84B2CC;
+}
+
+.navbar-button:hover,
+.navbar-button:active,
+.navbar-button:focus {
+  color: #FFF;
+  background-color: #84B2CC;
+  border: 3px solid #144F70;
+  outline: none;
+  cursor: pointer;
 }
 
 .item {
@@ -74,6 +90,10 @@ body {
 
 .item-name, .item-id {
   color: #84B2CC;
+}
+
+.item-name:hover, .item-name:focus {
+  color: #EEE;
 }
 
 .item-hazardous {

@@ -20,9 +20,11 @@ const Item = ({ neo }) => {
     <div className='container'>
       <div className="item card">
         <div className="card-body">
-          <a href={nasa_jpl_url}>
-            <h4 className='item-name'>Name: {name}</h4>
-          </a>
+            <h4>
+              <a className='item-name' href={nasa_jpl_url}>
+                Name: {name}
+              </a>
+            </h4>
           <h6 className='item-id'>Reference ID: {neo_reference_id}</h6>
           <Divider />
           <div className='row text-center'>

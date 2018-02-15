@@ -2,7 +2,7 @@ import React from 'react';
 
 const Button = (props) => {
   return (
-    <button className='button text-uppercase'>
+    <button className='navbar-button text-uppercase'>
       {props.children}
     </button>
   )

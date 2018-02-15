@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import moment from 'moment';
 import getNeos from './utils/getNeos';
 import Header from './components/Header';
 import Item from './components/Item';
+
+const date = moment();
+const dateInWords = date.format('MMMM Do, YYYY');
+export const dateInNums = date.format('YYYY-MM-DD');
 
 class App extends Component {
   componentDidMount() { this.props._getNeos(); };
@@ -10,7 +15,7 @@ class App extends Component {
     const { error, isFetching, neos } = this.props;
     return (
       <div id='app'>
-        <Header />
+        <Header date={dateInWords} />
         {
           error ?
           <h3 className='text-center' style={{ color: 'white' }}>{error}</h3> :
