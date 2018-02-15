@@ -37,8 +37,12 @@ a, a:hover, a:focus {
   background: rgba(0, 0, 0, 0);
 }
 
-.header-date{
+.header-date, .header-api-link {
   color: #84B2CC;
+}
+
+.header-api-link:hover {
+  color: #EEE;
 }
 
 .divider {
