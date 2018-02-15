@@ -82,6 +82,24 @@ a, a:hover, a:focus {
   cursor: pointer;
 }
 
+.spinner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  animation: spin-spinner infinite 0.25s linear;
+  width: 150vw;
+  height: 15vw;
+}
+
+@keyframes spin-spinner {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 .item {
   margin: 0 0 25px 0;
   background: #001723;

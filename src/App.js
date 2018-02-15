@@ -4,6 +4,7 @@ import moment from 'moment';
 import getNeos from './utils/getNeos';
 import Header from './components/Header';
 import Item from './components/Item';
+import Spinner from './components/Spinner';
 
 const date = moment();
 const dateInWords = date.format('MMMM Do, YYYY');
@@ -20,7 +21,7 @@ class App extends Component {
           error ?
           <h3 className='text-center' style={{ color: 'white' }}>{error}</h3> :
           isFetching ?
-          <h3 className='text-center' style={{ color: 'white' }}>Fetching...</h3> :
+          <Spinner /> :
           neos ?
           neos.map((neo, key) => <Item neo={neo} key={key} />) :
           <h3 className='text-center' style={{ color: 'white' }}>Waiting...</h3>

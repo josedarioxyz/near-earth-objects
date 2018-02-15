@@ -1,5 +1,5 @@
 import React from 'react';
-import ApproachData from './ApproachData';
+import Table from './Table';
 import Divider from './Divider';
 
 const Item = ({ neo }) => {
@@ -45,7 +45,7 @@ const Item = ({ neo }) => {
               </dl>
             </div>
             <div className='col'>
-              <ApproachData data={close_approach_data[0]} />
+              <Table data={close_approach_data[0]} />
             </div>
           </div>
         </div>

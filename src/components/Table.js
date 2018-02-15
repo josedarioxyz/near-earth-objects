@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ApproachData = ({ data }) => {
+const Table = ({ data }) => {
   const {
     close_approach_date,
     relative_velocity,
@@ -36,4 +36,4 @@ const ApproachData = ({ data }) => {
   );
 };
 
-export default ApproachData;
+export default Table;
