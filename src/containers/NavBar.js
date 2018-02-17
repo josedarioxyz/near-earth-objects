@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Button from '../components/Button';
+import { NavLink } from 'react-router-dom';
 
 class NavBar extends Component {
   componentDidMount() {
@@ -21,9 +21,15 @@ class NavBar extends Component {
     return (
       <div id='navbar-container'>
         <nav id='navbar' className='nav'>
-          <Button>Home</Button>
-          <Button>What is a NEO?</Button>
-          <Button>Glossary</Button>
+          <NavLink className='navbar-button text-uppercase' to='/'>
+            Home
+          </NavLink>
+          <NavLink className='navbar-button text-uppercase' to='/about-neos'>
+            What is a NEO?
+          </NavLink>
+          <NavLink className='navbar-button text-uppercase' to='/glossary'>
+            Glossary
+          </NavLink>
         </nav>
       </div>
     )

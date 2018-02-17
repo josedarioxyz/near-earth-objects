@@ -37,9 +37,7 @@ const Item = ({ neo }) => {
                 <dt>Estimated Diameter:</dt>
                 <dd>
                   {estimated_diameter_min} m
-                  <br />
-                    ~
-                  <br />
+                  <br /> ~ <br />
                   {estimated_diameter_max} m
                 </dd>
               </dl>

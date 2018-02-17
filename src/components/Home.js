@@ -1,4 +1,6 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 import Spinner from './Spinner';
 import RequestError from './RequestError';
 import Item from './Item';
@@ -12,7 +14,12 @@ const Home = ({ error, hasRequested, neos }) => {
         neos.map((neo, key) => <Item neo={neo} key={key} />)
       }
     </div>
-  )
-}
+  );
+};
 
-export default Home;
+const mapStateToProps = (state) => {
+  const { error, hasRequested, neos } = state.neosReducer;
+  return { error, hasRequested, neos };
+};
+
+export default withRouter(connect(mapStateToProps)(Home));

@@ -28,6 +28,10 @@ body {
   background-repeat: no-repeat;
 }
 
+a {
+  color: #84B2CC;
+}
+
 a, a:hover, a:focus {
   text-decoration: none;
 }
@@ -67,6 +71,11 @@ a, a:hover, a:focus {
 }
 
 .navbar-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
   flex: 1;
   margin: 0px;
   padding: 5px;
@@ -84,6 +93,14 @@ a, a:hover, a:focus {
   border: 3px solid #144F70;
   outline: none;
   cursor: pointer;
+}
+
+#about, #glossary, #footer {
+  color: #EEE;
+}
+
+#footer {
+  min-height: 100px;
 }
 
 .spinner-container {

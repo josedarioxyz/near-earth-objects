@@ -22,7 +22,7 @@ const Header = ({ date }) => {
         <NavBar />
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Header;
