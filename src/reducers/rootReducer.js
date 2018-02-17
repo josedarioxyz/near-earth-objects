@@ -7,7 +7,7 @@ import {
 
 const initialState = {
   error: null,
-  isFetching: false,
+  hasRequested: false,
   neos: null
 };
 
@@ -16,20 +16,23 @@ const neosReducer = (state = initialState, action) => {
     case GET_NEOS_REQUEST:
       return {
         ...state,
-        isFetching: true,
-        error: null
+        error: null,
+        hasRequested: false,
+        neos: null
       }
     case GET_NEOS_RECEIVE:
       return {
         ...state,
-        isFetching: false,
+        error: null,
+        hasRequested: true,
         neos: action.payload
       }
     case GET_NEOS_FAILURE:
       return {
         ...state,
         error: action.payload,
-        isFetching: false
+        hasRequested: true,
+        neos: null
       }
     default:
       return state;
