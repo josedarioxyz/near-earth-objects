@@ -12,8 +12,7 @@ const About = () => {
       <Divider />
       <p className='text-left'>
         <a href='https://cneos.jpl.nasa.gov/about/basics.html'>
-          [Temporary placeholder description from the Center for Near Earth
-          Object Studies]:
+          From the Center for Near Earth Object Studies:
         </a>
       </p>
       <p className='text-left'>
