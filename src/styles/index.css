@@ -75,7 +75,7 @@ a, a:hover, a:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+
   flex: 1;
   margin: 0px;
   padding: 5px;
@@ -141,4 +141,9 @@ a, a:hover, a:focus {
 
 dt, th {
   color: #84B2CC;
+}
+
+.dark-container {
+  background-color: #001723;
+  padding: 5vw;
 }

@@ -1,9 +1,12 @@
 import React from 'react';
+import Divider from './Divider';
 
 const Glossary = () => {
   return (
     <div id='glossary' className='container'>
       <h2 className='text-right'>Glossary of Terms</h2>
+      <Divider />
+      <div className='dark-container'>
       {
         dictionary
           .sort((a, b) => a.term.localeCompare(b.term))
@@ -14,6 +17,7 @@ const Glossary = () => {
             </dl>
           )
       }
+      </div>
     </div>
   );
 };
